@@ -121,17 +121,35 @@ input.form-control {
 }
 
 .form-outline {
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
   position: relative;
-  padding:2px;
-  box-sizing: border-box; 
-  border-radius:10px;
-  display:block;
-  margin-bottom:18px;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 18px;
 }
 
-.form-outline.active{
+.form-outline.active {
   border: 1px solid #ef6532 !important;
+}
+
+.select-outline {
+  border: 1px solid #b4b4b4;
+  position: relative;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: block;
+  padding: 12px;
+  color: #bababa;
+}
+
+.select-outline:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid #ef6532 !important;
+  shadow: 0;
 }
 
 .form-outline label {
@@ -147,23 +165,24 @@ input.form-control {
   transform-origin: 0 0;
   transition: all 0.2s ease-out;
   margin-bottom: 0;
-  font-size:16px;
-  font-weight:500;
-  background-color:white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
   display: inline-block;
-  padding-right:6px !important;
-  padding-left:6px !important;
-  color:#B4B4B4;
+  padding-right: 6px !important;
+  padding-left: 6px !important;
+  color: #b4b4b4;
 }
 
-.form-outline .outline-input.active~.form-label-outline, .form-outline .outline-input:focus~.form-label-outline {
-  transform: translateY(-14px) translateY(0.1rem) scale(.8);
-  padding-top:0;
+.form-outline .outline-input.active ~ .form-label-outline,
+.form-outline .outline-input:focus ~ .form-label-outline {
+  transform: translateY(-14px) translateY(0.1rem) scale(0.8);
+  padding-top: 0;
 }
 
-.coba{
-  transform: translateY(-14px) translateY(0.1rem) scale(.8);
-  padding-top:0 !important;
+.coba {
+  transform: translateY(-14px) translateY(0.1rem) scale(0.8);
+  padding-top: 0 !important;
 }
 
 .form-outline::after {
@@ -174,18 +193,18 @@ input.form-control {
   box-sizing: border-box;
 }
 
-.icon{
-  position:absolute;
-  top:0;
-  right:0;
-  display:flex;
-  height:100%;
-  align-items:center;
-  margin-right:20px;
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .outline-input {
-  font-size:16px;
+  font-size: 16px;
   border: 0;
   background: transparent;
 }
