@@ -1,0 +1,143 @@
+$color : (primary: #EF6532,
+    intercolor: #FF7F24,
+    semicolor: #ffdbcf,
+    semifullcolor: #ffcfc1,
+    alternatif: #FE7847,
+    secondary: #B4B4B4,
+    wallpaper: #EEEFF1,
+    dark: #111111,
+    light: rgba(255, 255, 255, 0.75),
+    semilight: rgba(255, 255, 255, 0.50));
+
+$ubuntu : 'Ubuntu';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $ubuntu;
+}
+
+.content {
+
+    height: 100vh;
+    width: 100vw;
+
+    &__image {
+        height: 100vh;
+        background-color: #d1d1d1;
+
+        img {
+            margin-top: auto;
+            margin-right: auto;
+            margin-left: auto;
+            bottom: 0;
+            width: 85%;
+            height: 85%;
+        }
+    }
+
+    &__text {
+
+        .active {
+            color: map-get($color, 'primary');
+        }
+
+        .form_input {
+
+            &__active {
+                margin-top: 25px;
+            }
+
+            input {
+                padding: 10px 10px 10px 20px;
+                background-color: transparent;
+                border: 0.5px solid map-get($color, "secondary");
+            }
+
+            .input-group {
+
+                input {
+                    border-right: none !important;
+                }
+
+            }
+
+            button {
+                border-radius: 5px;
+                border: 0.5px solid map-get($color, "secondary");
+                background: transparent;
+                border-left: none;
+                color: #111111;
+            }
+
+            input:focus {
+                border: solid 0.5px map-get($color, "primary");
+                box-shadow: none;
+            }
+
+            label {
+                margin-bottom: -35px;
+                color: map-get($color, "secondary");
+                margin-left: 20px;
+                margin-right: auto;
+            }
+
+            .active_label {
+                margin-bottom: -12px;
+                z-index: 10;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+                color: map-get($color, "primary");
+            }
+
+            .active_label_value {
+                margin-bottom: -12px;
+                z-index: 10;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+                color: map-get($color, "secondary");
+            }
+        }
+
+        button {
+            background-color: map-get($color, "primary");
+            color: white;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+            color: map-get($color, "secondary");
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        p {
+            color: map-get($color, "secondary");
+            font-weight: 400;
+            margin: 0 20px 0 20px;
+        }
+
+        a.active {
+            color: map-get($color, "primary");
+            font-weight: 500;
+        }
+
+        &__footer {
+            span {
+                font-weight: 500;
+
+                a {
+                    color: map-get($color, "primary");
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+        }
+
+    }
+
+
+}
